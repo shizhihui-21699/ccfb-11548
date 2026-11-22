@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">防窥盾</string>
+
+    <string name="main_title">防窥盾 Demo</string>
+    <string name="main_subtitle">客户资料在有人偷看时自动遮挡。摄像头画面只在内存中处理，不存储、不上传。</string>
+    <string name="main_open_client">打开客户资料（受保护页面）</string>
+    <string name="main_settings">防窥设置</string>
+
+    <string name="main_privacy_title">隐私保证</string>
+    <string name="main_privacy_body">· 应用未声明 INTERNET 权限，物理上无法上传\n· 摄像头帧仅在内存中交给本地模型，用完立即释放\n· 无任何截图 / 录屏 / 相册权限，不写入任何文件\n· 页面开启 FLAG_SECURE，系统截屏与录屏同样被阻止</string>
+
+    <string name="guard_status_on">防护中</string>
+    <string name="guard_status_unavailable">摄像头不可用</string>
+    <string name="guard_status_setup">需要摄像头权限</string>
+    <string name="guard_grant">开启防护</string>
+
+    <string name="shield_title">屏幕已遮挡</string>
+    <string name="shield_body">检测到有人正在看向屏幕，敏感内容已隐藏。\n离开视线后自动恢复。</string>
+    <string name="shield_continue">继续查看</string>
+
+    <string name="shield_obstructed_title">摄像头被遮挡</string>
+    <string name="shield_obstructed_body">无法确认周围情况，已隐藏敏感内容。\n取下遮挡物后会自动恢复。</string>
+    <string name="shield_fallback_title">防护未开启</string>
+    <string name="shield_fallback_body">防窥需要前置摄像头在本地判断是否有他人在看屏幕。\n未授权时无法验证环境，因此先隐藏敏感内容。</string>
+    <string name="shield_unknown_title">需要确认身份</string>
+    <string name="shield_unknown_body">有一段时间没有识别到你本人，手机可能已被他人拿起。\n为保护客户资料，请先验证设备锁屏密码或生物识别。</string>
+    <string name="shield_verify_identity">验证身份后继续</string>
+    <string name="shield_verify_identity_body">验证通过后将恢复正常的查看状态</string>
+    <string name="shield_no_device_credential">本机未设置锁屏密码，无法验证身份，已保持遮挡。\n请先在系统设置中设置锁屏密码或生物识别。</string>
+
+    <string name="main_snoozed_hint">防窥当前处于临时关闭状态</string>
+
+    <string name="low_visibility_banner">环境光异常，检测精度下降</string>
+
+    <string name="client_name">王建国</string>
+    <string name="client_risk_level">风险等级 A（高净值）</string>
+    <string name="client_phone">138 **** 6021</string>
+    <string name="client_id">31010***********7712</string>
+    <string name="client_balance">¥ 4,286,910.55</string>
+    <string name="client_transactions">2026-11-19  申购 稳健增利 3 号      + 500,000.00\n2026-11-18  赎回 现金管理 A          − 120,000.00\n2026-11-15  转入 行内汇款            + 1,000,000.00\n2026-11-12  申购 中证 500 指数增强     + 300,000.00\n2026-11-05  分红 稳利债券组合           + 18,420.75</string>
+
+    <string name="client_detail_title">客户资料</string>
+    <string name="label_name">客户姓名</string>
+    <string name="label_id">证件号码</string>
+    <string name="label_phone">联系电话</string>
+    <string name="label_balance">资产总额</string>
+    <string name="label_transactions">近期交易</string>
+
+    <string name="partial_bar_text">检测到周围有人，敏感字段已模糊。</string>
+    <string name="shield_scope">已隐藏的内容：姓名、证件号、电话、资产与交易明细。\n本页仅本机处理，无任何画面被保存或上传。</string>
+
+    <string name="settings_title">防窥设置</string>
+    <string name="settings_sensitivity">灵敏度</string>
+    <string name="settings_sensitivity_hint">越高越容易触发遮挡，误报也越多</string>
+    <string name="settings_snooze">临时关闭（30 分钟）</string>
+    <string name="settings_snooze_body">关闭期间的遮挡事件仍会记录到本机审计日志，供合规检查。</string>
+    <string name="settings_lens">实验特性：检测镜头对准屏幕</string>
+    <string name="settings_lens_body">通过人脸以外的线索判断是否有人举着手机拍摄。误报率较高，默认关闭。</string>
+    <string name="settings_audit_title">本机遮挡记录（仅元数据）</string>
+    <string name="settings_audit_clear">清除记录</string>
+    <string name="settings_audit_empty">暂无记录</string>
+
+
+</resources>

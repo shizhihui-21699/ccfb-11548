@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#FF1F4E79</color>
+    <color name="brand_dark">#FF0F2C47</color>
+    <color name="shield_bg">#FF0B0F14</color>
+    <color name="shield_fg">#FFE8EDF2</color>
+    <color name="shield_icon">#FF7FB2E5</color>
+    <color name="shield_scope_fg">#FF8A98A8</color>
+    <color name="status_ok">#FF1E8E5A</color>
+    <color name="status_warn">#FFB26A00</color>
+    <color name="status_alert">#FFB3261E</color>
+</resources>

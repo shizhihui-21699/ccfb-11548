@@ -16,3 +16,13 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# Android / Gradle
+local.properties
+build/
+.gradle/
+*.apk
+*.aab
+*.iml
+.idea/
+.DS_Store

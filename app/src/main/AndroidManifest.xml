@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      ONLY this permission is requested. No INTERNET, no storage, no media, no location.
+
+      The app is structurally incapable of uploading anything: the INTERNET permission is
+      explicitly removed from the merged manifest below, so even a transitive library that
+      declares it cannot open a socket in this process. Verify with:
+          ./gradlew :app:assembleDebug
+          $ANDROID_HOME/build-tools/35.0.0/aapt2 dump permissions app/build/outputs/apk/debug/app-debug.apk
+      See scripts/verify_privacy_guarantees.sh.
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
+
+    <!-- Front camera is the whole point; devices without one cannot run the shield. -->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <application
+        android:name=".PrivacyShieldApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrivacyShield"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          The sensitive screen. Shield only runs here, which is why the camera is off
+          on the non-sensitive list screen (see ShieldHost: bind on start, unbind on stop).
+        -->
+        <activity
+            android:name=".ui.ClientDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.ShieldSettingsActivity"
+            android:exported="false" />
+    </application>
+</manifest>

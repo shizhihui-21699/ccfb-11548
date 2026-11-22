@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield outline -->
+    <path
+        android:fillColor="#1F4E79"
+        android:pathData="M54,26 L78,35 L78,55 C78,70 68,81 54,86 C40,81 30,70 30,55 L30,35 Z" />
+    <!-- Eye / watch mark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,48 C60,48 65,52 67,56 C65,60 60,64 54,64 C48,64 43,60 41,56 C43,52 48,48 54,48 Z" />
+    <path
+        android:fillColor="#1F4E79"
+        android:pathData="M54,51 C56.8,51 59,53.2 59,56 C59,58.8 56.8,61 54,61 C51.2,61 49,58.8 49,56 C49,53.2 51.2,51 54,51 Z" />
+</vector>
